@@ -17,8 +17,6 @@ public class App
     public static void main( String[] args )
     {
     	Pippo pippo = new Pippo(new Application());
-    
-        
         
         pippo.GET("/", routeContext -> routeContext.send("Hello World!"));
         pippo.start(Integer.parseInt(port.orElse("8083")));
