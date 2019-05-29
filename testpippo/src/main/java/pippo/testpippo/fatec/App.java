@@ -9,16 +9,16 @@ import ro.pippo.core.Pippo;
  * Hello world!
  *
  */
-public class App 
+public class App // port 8338
 {
 	
 	public static Optional<String> port = Optional.ofNullable(System.getenv("PORT"));
 	
     public static void main( String[] args )
     {
-    	Pippo pippo = new Pippo(new Application());
-        
-        pippo.GET("/", routeContext -> routeContext.send("Hello World!"));
-        pippo.start(Integer.parseInt(port.orElse("8083")));
+        Pippo pippo = new Pippo(new BasicApplication());
+        pippo.start();
+
+//        pippo.start(Integer.parseInt(port.orElse("8083")));
     }
 }
