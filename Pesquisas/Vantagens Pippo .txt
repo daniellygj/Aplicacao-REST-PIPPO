@@ -1,0 +1,17 @@
+Suporte para CSRF
+
+Integração com Spring, CDI e Guide
+
+O Spring é um framework Java criado com o objetivo de facilitar o desenvolvimento de aplicações, explorando, para isso, os conceitos de Inversão de Controle e Injeção de Dependências. Dessa forma, ao adotá-lo, temos à nossa disposição uma tecnologia que nos fornece não apenas recursos necessários à grande parte das aplicações, como módulos para persistência de dados, integração, segurança, testes, desenvolvimento web, como também um conceito a seguir que nos permite criar soluções menos acopladas, mais coesas e, conseqüentemente, mais fáceis de compreender e manter.
+
+CDI é a especificação do Java EE 6 que cuida da parte de injeção de dependências. E, além de ser oficial e estar incluída em todos os servidores de aplicação, é tão boa e produtiva que já tem gente questionando o papel do Spring nos dias de hoje.
+
+O principal objetivo do Guice é ser bem leve em comparação ao Spring além de não precisar de um grande número de xmls (você consegue injetar dependência sem usar nenhum! ). Outra informação bastante interessante é que nessa versão ele implementa a JSR 330. O Guice também trabalha na injeção de dependência em OSGI, struts, Swing, JPA e também em Servlets.
+
+Fácil configuração
+
+Possivel integração com sistemas de monitoramento de desempenho (Ex: Ganglia)
+
+O Ganglia é uma maravilhosa ferramenta de monitoramento que serve tanto para clusters de milhares de máquinas quanto para um só computador. Ele possui uma interface web com gráficos gerados pelo RRDtool
+
+É Open Source
