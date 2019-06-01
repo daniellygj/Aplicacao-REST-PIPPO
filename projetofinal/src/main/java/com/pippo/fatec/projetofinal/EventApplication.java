@@ -1,6 +1,10 @@
 package com.pippo.fatec.projetofinal;
 
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -19,12 +23,18 @@ public class EventApplication extends Application {
 		 POST("/loadjson", routeContext -> {
 			 final Request req = routeContext.json().getRequest();
 			
-			 routeContext.json().send(getCodeJson(req));
+			// routeContext.json().send(getCodeJson(req));
+			 try {
+				createCodePython(req);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	      });
 
 	}
 	
-	private Resposta getCodeJson(Request request) {
+	private void createCodePython(Request request) throws IOException {
 
 		try {
 			JSONObject json;
@@ -33,15 +43,20 @@ public class EventApplication extends Application {
 			String problem = json.getString("problem");
 			String sourceCode = json.getString("sourcecode");
 			
-			return new Resposta(filename, problem, sourceCode);
-		
+			FileWriter filePython = new FileWriter("d:\\" + filename);
+			PrintWriter filePythonWriter = new PrintWriter(filePython);
+			
+			filePythonWriter.printf(sourceCode);
+			filePythonWriter.close();
 			
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return null;
+		
 		
 	}
+	
+	
 	
 }

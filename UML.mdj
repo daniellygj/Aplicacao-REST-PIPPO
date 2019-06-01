@@ -157,6 +157,23 @@
 									"subViews": [
 										{
 											"_type": "UMLOperationView",
+											"_id": "AAAAAAFrFHIFfXB6xJU=",
+											"_parent": {
+												"$ref": "AAAAAAFrE6cu2qtvZd0="
+											},
+											"model": {
+												"$ref": "AAAAAAFrFHIFa3B3A44="
+											},
+											"font": "Arial;13;0",
+											"left": 109,
+											"top": 221,
+											"width": 161.509765625,
+											"height": 13,
+											"text": "+onInit()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
 											"_id": "AAAAAAFrE6kbR6uVSvY=",
 											"_parent": {
 												"$ref": "AAAAAAFrE6cu2qtvZd0="
@@ -166,10 +183,10 @@
 											},
 											"font": "Arial;13;0",
 											"left": 109,
-											"top": 221,
+											"top": 236,
 											"width": 161.509765625,
 											"height": 13,
-											"text": "+getCodeJson()",
+											"text": "+createCodePython()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -183,7 +200,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 109,
-											"top": 236,
+											"top": 251,
 											"width": 161.509765625,
 											"height": 13,
 											"text": "+runPython()",
@@ -200,7 +217,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 109,
-											"top": 251,
+											"top": 266,
 											"width": 161.509765625,
 											"height": 13,
 											"text": "+comparator()",
@@ -217,7 +234,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 109,
-											"top": 266,
+											"top": 281,
 											"width": 161.509765625,
 											"height": 13,
 											"text": "+addRespostaList()",
@@ -228,7 +245,7 @@
 									"left": 104,
 									"top": 216,
 									"width": 171.509765625,
-									"height": 68
+									"height": 83
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -855,11 +872,19 @@
 					"operations": [
 						{
 							"_type": "UMLOperation",
+							"_id": "AAAAAAFrFHIFa3B3A44=",
+							"_parent": {
+								"$ref": "AAAAAAFrE6cu06tme60="
+							},
+							"name": "onInit"
+						},
+						{
+							"_type": "UMLOperation",
 							"_id": "AAAAAAFrE6ka9KuSLFQ=",
 							"_parent": {
 								"$ref": "AAAAAAFrE6cu06tme60="
 							},
-							"name": "getCodeJson"
+							"name": "createCodePython"
 						},
 						{
 							"_type": "UMLOperation",
