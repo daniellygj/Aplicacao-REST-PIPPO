@@ -1,9 +1,13 @@
 package pippo.testpippo.fatec;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Optional;
 
+import ro.pippo.core.Application;
 import ro.pippo.core.Pippo;
 
 /**
@@ -11,14 +15,20 @@ import ro.pippo.core.Pippo;
  *
  */
 public class App // port 8338
-{
+{                   // inputStream outputStream
+                    // reader | writer
+                    // classe File
 	
 	public static Optional<String> port = Optional.ofNullable(System.getenv("PORT"));
 	
     public static void main( String[] args ) throws IOException {
-        Pippo pippo = new Pippo(new BasicApplication());
-        pippo.start();
+    	//Service.executePython();
 
-        pippo.start(Integer.parseInt(port.orElse("8083")));
+    	
+       /*Chamada da classe das rotas para inicialização da aplicação*/	
+       Pippo pippo = new Pippo(new EventApplication());
+       pippo.start(Integer.parseInt(port.orElse("8080")));
+
+       
     }
 }

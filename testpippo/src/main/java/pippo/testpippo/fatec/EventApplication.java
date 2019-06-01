@@ -8,7 +8,7 @@ import java.io.File;
 
 import static ro.pippo.core.route.Route.GET;
 
-public class BasicApplication extends Application {
+public class EventApplication extends Application {
 
     protected void onInit() {
         // send 'Hello World' as response
