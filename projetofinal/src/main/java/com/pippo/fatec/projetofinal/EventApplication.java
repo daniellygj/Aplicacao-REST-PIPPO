@@ -17,38 +17,31 @@ public class EventApplication extends Application {
 		 
 		 /*Aqui iremos carregar o json*/
 		 POST("/loadjson", routeContext -> {
-			 
+			 final Request req = routeContext.json().getRequest();
 			
-				try {
-					final Request req = routeContext.json().getRequest();
-					
-					
-					JSONObject json;
-					json = new JSONObject(req.getBody());
-					String file = json.getString("filename");
-					System.out.println(file);
-					 
-					//routeContext.send(a);
-			            //Resposta pesposta = newResposta();
-			         routeContext.json().send(file);
-					
-				} catch (JSONException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
-		
-				 
-				
-			 
+			 routeContext.json().send(getCodeJson(req));
 	      });
-		 
-	
 
 	}
 	
-	private Resposta newResposta() {
-		return new Resposta("teste.py", "A", "print(\"Hello world\")\r\n" + 
-				"print(2 * 2)");
+	private Resposta getCodeJson(Request request) {
+
+		try {
+			JSONObject json;
+			json = new JSONObject(request.getBody());
+			String filename = json.getString("filename");
+			String problem = json.getString("problem");
+			String sourceCode = json.getString("sourcecode");
+			
+			return new Resposta(filename, problem, sourceCode);
+		
+			
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+		
 	}
+	
 }
