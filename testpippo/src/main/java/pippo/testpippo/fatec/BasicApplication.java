@@ -1,11 +1,8 @@
 package pippo.testpippo.fatec;
-
 import pippo.testpippo.fatec.App;
 import pippo.testpippo.fatec.Contact;
 import ro.pippo.core.Application;
-
 import java.io.File;
-
 import static ro.pippo.core.route.Route.GET;
 
 public class BasicApplication extends Application {
@@ -47,3 +44,11 @@ public class BasicApplication extends Application {
     }
 
 }
+// post pra pegar do user
+// pega em base 64
+// salva em um arquivo
+// e o restante
+
+
+
+

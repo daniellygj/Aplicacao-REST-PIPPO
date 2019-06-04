@@ -17,16 +17,11 @@ public class App // port 8338
 {                   // inputStream outputStream
                     // reader | writer
                     // classe File
-	
-	public static Optional<String> port = Optional.ofNullable(System.getenv("PORT"));
-	
+
     public static void main( String[] args ) throws IOException {
+        Controller.executePython();
 
-
-//
 //        Pippo pippo = new Pippo(new BasicApplication());
 //        pippo.start();
-//
-//        pippo.start(Integer.parseInt(port.orElse("8083")));
     }
 }

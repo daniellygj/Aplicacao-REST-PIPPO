@@ -6,11 +6,14 @@ import java.io.BufferedReader;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.ByteBuffer;
+import java.nio.charset.Charset;
+import java.util.Base64;
 
 
 public class Controller extends Application {
 
-    public void executePython() throws IOException {
+    static void executePython() throws IOException {
         String python_path = System.getenv("PYTHON_PATH");
         System.out.println(python_path);
 
