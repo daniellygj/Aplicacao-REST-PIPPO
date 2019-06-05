@@ -22,12 +22,11 @@ public class App // port 8338
 	public static Optional<String> port = Optional.ofNullable(System.getenv("PORT"));
 	
     public static void main( String[] args ) throws IOException {
-    	//Service.executePython();
+    	Service.executePython();
 
-    	
        /*Chamada da classe das rotas para inicialização da aplicação*/	
        Pippo pippo = new Pippo(new EventApplication());
-       pippo.start(Integer.parseInt(port.orElse("8080")));
+       pippo.start(Integer.parseInt(port.orElse("8338")));
 
        
     }
