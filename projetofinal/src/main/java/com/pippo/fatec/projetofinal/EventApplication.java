@@ -1,8 +1,10 @@
 package com.pippo.fatec.projetofinal;
 
 
+import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
 import org.json.JSONException;
@@ -10,7 +12,6 @@ import org.json.JSONObject;
 
 import ro.pippo.core.Application;
 import ro.pippo.core.Request;
-import ro.pippo.core.Application;
 
 public class EventApplication extends Application {
 	
@@ -39,15 +40,19 @@ public class EventApplication extends Application {
 		try {
 			JSONObject json;
 			json = new JSONObject(request.getBody());
-			String filename = json.getString("filename");
+			String fileName = json.getString("filename");
 			String problem = json.getString("problem");
 			String sourceCode = json.getString("sourcecode");
 			
-			FileWriter filePython = new FileWriter("d:\\" + filename);
+			System.out.println(fileName);
+			
+			FileWriter filePython = new FileWriter("files\\" + fileName);
 			PrintWriter filePythonWriter = new PrintWriter(filePython);
 			
 			filePythonWriter.printf(sourceCode);
 			filePythonWriter.close();
+			
+			runPython(fileName);
 			
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
@@ -55,6 +60,23 @@ public class EventApplication extends Application {
 		}
 		
 		
+	}
+	
+	public void runPython(String fileName) throws IOException {
+		
+		String python_path = System.getenv("PYTHON_VENV");
+        System.out.println(python_path);
+
+        Process p = Runtime.getRuntime().exec(python_path + fileName);
+
+        BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
+       // BufferedReader stdError = new BufferedReader(new InputStreamReader(p.getErrorStream()));
+
+        String s = null;
+        while ((s = stdInput.readLine()) != null) {
+            System.out.println(s);
+        }
+
 	}
 	
 	
