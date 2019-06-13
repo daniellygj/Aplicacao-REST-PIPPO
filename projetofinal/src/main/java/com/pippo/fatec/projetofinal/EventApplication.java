@@ -64,10 +64,12 @@ public class EventApplication extends Application {
 	
 	public void runPython(String fileName) throws IOException {
 		
-		String python_path = System.getenv("PYTHON_VENV");
-        System.out.println(python_path);
+		
+		//String python_path = System.getenv("PYTHON_VENV");
+		String execution = "cmd.exe /c python files/" + fileName;
+        System.out.println(execution);
 
-        Process p = Runtime.getRuntime().exec(python_path + fileName);
+        Process p = Runtime.getRuntime().exec(execution);
 
         BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
        // BufferedReader stdError = new BufferedReader(new InputStreamReader(p.getErrorStream()));
