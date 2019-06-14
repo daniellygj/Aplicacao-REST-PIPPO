@@ -6,7 +6,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 
+import javax.xml.bind.DatatypeConverter;
+
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -35,6 +39,7 @@ public class EventApplication extends Application {
 
 	}
 	
+	/*acessar a rota, pelo postman enviando o Json*/
 	private void createCodePython(Request request) throws IOException {
 
 		try {
@@ -62,20 +67,24 @@ public class EventApplication extends Application {
 		
 	}
 	
+	/*Método de execuçao do arquivo python gerado*/
 	public void runPython(String fileName) throws IOException {
 		
 		
 		//String python_path = System.getenv("PYTHON_VENV");
-		String execution = "cmd.exe /c python files/" + fileName;
+		/*execução do arquivo na pasta files raiz do projeto*/
+		String execution = "cmd.exe /c python files/" + fileName; 
+		
         System.out.println(execution);
 
         Process p = Runtime.getRuntime().exec(execution);
 
-        BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
+        BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream(), "ISO-8859-1"));
        // BufferedReader stdError = new BufferedReader(new InputStreamReader(p.getErrorStream()));
 
         String s = null;
-        while ((s = stdInput.readLine()) != null) {
+        
+        while ((s = new String(stdInput.readLine().getBytes())) != null) {
             System.out.println(s);
         }
 
