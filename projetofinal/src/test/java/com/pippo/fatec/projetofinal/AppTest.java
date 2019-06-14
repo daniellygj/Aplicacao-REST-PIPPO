@@ -1,4 +1,4 @@
-package pippo.testpippo.fatec;
+package com.pippo.fatec.projetofinal;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
