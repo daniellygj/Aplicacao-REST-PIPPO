@@ -34,7 +34,15 @@ public class EventApplication extends Application {
 			routeContext.json().send(new Resposta(resposta.getFilename(), resposta.getProblem(), resposta.getStatus()));
 			
 		});
-		POST("/historico", routeContext -> {
+		
+		/*Rota GET, alterar no Postman para GET retorna o Hitorico
+		 *
+		 * Criar Rota com inserção de variaveis para consultar com filtros
+		 * loadjson/status
+		 * loadjson/id
+		 * loadjson/perido*/
+		
+		GET("/loadjson", routeContext -> {
 			routeContext.json().send(py.getRespostas());
 		});
 		

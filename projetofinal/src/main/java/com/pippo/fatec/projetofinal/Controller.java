@@ -35,12 +35,20 @@ public class Controller{
 		
 	}
 	
-	public BufferedReader executePython(String fileName) throws IOException { // função temporaria
+	public BufferedReader executePython(String fileName) { // função temporaria
 		
 		String python_path = "C:\\Users\\danny\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe";
-		Process p = Runtime.getRuntime().exec(python_path + " files\\script-python\\" + fileName);
-		BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream(), "ISO-8859-1"));
-		return stdInput;
+		Process p;
+		try {
+			p = Runtime.getRuntime().exec(python_path + " files\\script-python\\" + fileName);
+			BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream(), "ISO-8859-1"));
+			return stdInput;
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+		
 		
 	}
 	
