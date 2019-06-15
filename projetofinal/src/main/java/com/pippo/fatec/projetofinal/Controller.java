@@ -101,6 +101,9 @@ public class Controller{
 	public void addRespostas(Resposta resposta) {
 		respostas.add(resposta);
 	}
+	public List<Resposta> getRespostas() {
+		return respostas;
+	}
 	
 	
 

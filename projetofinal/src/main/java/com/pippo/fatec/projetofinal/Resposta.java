@@ -56,6 +56,12 @@ public class Resposta {
 		this.sourceCode = sourceCode;
 		this.status = status;
 	}
+	public Resposta(String filename, String problem, String status) {
+		super();
+		this.filename = filename;
+		this.problem = problem;
+		this.status = status;
+	}
 	
 	
 	
