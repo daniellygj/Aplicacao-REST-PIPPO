@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.LinkedList;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -27,7 +28,7 @@ public class EventApplication extends Application {
 			
 			addResposta(req);
 			py.createCodePython(resposta);
-			BufferedReader stdInput = py.runPython(resposta.getFilename());
+			LinkedList<BufferedReader> stdInput = py.runPython(resposta.getFilename());
 			py.compareResult(stdInput, resposta);
 			
 			/*Retorna Json da resultado da Resposta*/
