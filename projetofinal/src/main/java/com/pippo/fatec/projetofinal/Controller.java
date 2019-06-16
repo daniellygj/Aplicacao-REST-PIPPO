@@ -63,8 +63,10 @@ public class Controller{
 		OutputStream out;
 		LinkedList<BufferedReader> listStdImput = new LinkedList<>();
 
+		int limit = getQuantityOfInput(fileName);
+
 		try {
-			for (int i = 1; i <= 3; i++) {
+			for (int i = 1; i < limit; i++) {
 				p = Runtime.getRuntime().exec(execution);
 				out = p.getOutputStream();
 				inputPy(out, i, fileName);
@@ -79,23 +81,12 @@ public class Controller{
 		return listStdImput;
 	}
 
-//	public int getQuantityOfInput() { // TODO aqui
-//		int qtd = 0;
-//
-//		try (Stream<Path> walk = Files.walk(Paths.get("C:\\Users\\danny\\Desktop\\Nova pasta"))) {
-//
-//			List<String> result = walk.filter(Files::isRegularFile)
-//					.map(x -> x.toString()).collect(Collectors.toList());
-//
-//			result.forEach(System.out::println);
-//
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//
-//		return qtd;
-//	}}
-	
+	public int getQuantityOfInput(String fileName) { // TODO aqui
+		File directory = new File("files\\input-python\\" + fileName.split("\\.")[0]);
+
+		return directory.list().length;
+	}
+
 	public String compareResult(LinkedList<BufferedReader> inputList, Resposta resp) {
 		BufferedReader reader;
 		String result = "Success";

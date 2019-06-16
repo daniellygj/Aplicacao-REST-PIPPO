@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="366322fd-2dd7-490e-af5b-a86bc2e927e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/files/expected-result/pradinho/output1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/expected-result/pradinho/output1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/script-python/pradinho.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/script-python/pradinho.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pippo/fatec/projetofinal/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pippo/fatec/projetofinal/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pippo/fatec/projetofinal/EventApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pippo/fatec/projetofinal/EventApplication.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,14 +35,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pippo/fatec/projetofinal/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+            <state relative-caret-position="281">
+              <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#360#370#0" expanded="true" />
-                <element signature="e#3458#3459#0" expanded="true" />
-                <element signature="e#3521#3522#0" expanded="true" />
+                <element signature="e#3339#3340#0" expanded="true" />
+                <element signature="e#3402#3403#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/files/expected-result/pradinho/output1.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="1" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -65,6 +72,8 @@
       <find>syste</find>
       <find>input</find>
       <find>inputPy</find>
+      <find>for</find>
+      <find>getQuantityOfInput</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,7 +183,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560720250874" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560721094631" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -235,7 +244,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.19932885" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.20604026" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.18900804" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.21946308" side_tool="true" weight="0.2533512" />
@@ -243,7 +252,7 @@
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.7805369" weight="0.2533512" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.7805369" visible="true" weight="0.18364611" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -331,19 +340,19 @@
     <entry file="file://$PROJECT_DIR$/files/expected-result/pradinho/output1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pippo/fatec/projetofinal/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+        <state relative-caret-position="281">
+          <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#360#370#0" expanded="true" />
-            <element signature="e#3458#3459#0" expanded="true" />
-            <element signature="e#3521#3522#0" expanded="true" />
+            <element signature="e#3339#3340#0" expanded="true" />
+            <element signature="e#3402#3403#0" expanded="true" />
           </folding>
         </state>
       </provider>
