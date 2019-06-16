@@ -11,7 +11,8 @@ import java.util.Base64;
 import java.util.List;
 
 
-public class Controller{
+
+public class Controller {
 	
 	List<Resposta> respostas = new ArrayList<Resposta>();
 	
@@ -114,5 +115,37 @@ public class Controller{
 	}
 	
 	
-
+	public List<Resposta> getByIdProblem(String problem){
+		List<Resposta> listByProblem = new ArrayList<Resposta>();
+		
+		for(Resposta resp: respostas) {
+			if(resp.getProblem().equals(problem)) {
+				listByProblem.add(resp);
+			}
+		}
+		return listByProblem;
+	}
+	
+	public List<Resposta> getByIdDate(String date){
+		List<Resposta> listByDate = new ArrayList<Resposta>();
+		
+		for(Resposta resp: respostas) {
+			if(resp.getDatetime().equals(date)) {
+				listByDate.add(resp);
+			}
+		}
+		return listByDate;
+	}
+	public List<Resposta> getByStatus(String status){
+		List<Resposta> listByStatus = new ArrayList<Resposta>();
+		
+		for(Resposta resp: respostas) {
+			if(resp.getStatus().equals(status)) {
+				listByStatus.add(resp);
+			}
+		}
+		return listByStatus;
+	}
+	
+	
 }

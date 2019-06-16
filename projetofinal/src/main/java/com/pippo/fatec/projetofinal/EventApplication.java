@@ -3,6 +3,8 @@ package com.pippo.fatec.projetofinal;
 import java.io.BufferedReader;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 import org.json.JSONException;
@@ -46,6 +48,45 @@ public class EventApplication extends Application {
 			routeContext.json().send(py.getRespostas());
 		});
 		
+		GET("/loadjson/id/{value}", routeContext -> {
+			
+			if(routeContext.getParameter("value") != null) {
+				routeContext.json().send(py.getByIdProblem(routeContext.getParameter("value").toString()));
+			}
+			
+		});
+		GET("/loadjson/status/{value}", routeContext -> {
+					
+			if(routeContext.getParameter("value") != null){
+				routeContext.json().send(py.getByStatus(routeContext.getParameter("value").toString()));
+			}
+					
+				});
+		GET("/loadjson/datetime/{value}", routeContext -> {
+			if(routeContext.getParameter("value") != null){
+				System.out.println(routeContext.getParameter("value"));
+				routeContext.json().send(py.getByIdDate(routeContext.getParameter("value").toString()));
+			}
+			
+		});
+		
+		
+		
+		/*
+		 	if(routeContext.getParameter("status") != null){
+				System.out.println(routeContext.getParameter("status"));
+				routeContext.json().send(py.getByStatus(routeContext.getParameter("status").toString()));
+			}
+			if(routeContext.getParameter("datetime") != null){
+				System.out.println(routeContext.getParameter("datetime"));
+				routeContext.json().send(py.getByIdDate(routeContext.getParameter("datetime").toString()));
+			}
+		  
+		 * */
+		
+		
+		
+		
 	}
 	
 	private void addResposta(Request request) {
@@ -56,8 +97,17 @@ public class EventApplication extends Application {
 			String problem = json.getString("problem");
 			String sourceCode = json.getString("sourcecode");
 			
-			Date dataHoraAtual = new Date();
-			String data = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(dataHoraAtual);
+			
+			LocalDateTime agora = LocalDateTime.now();
+			
+	        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy-HH:mm:ss");
+	        
+	        String data = agora.format(formatter);
+	        
+	        
+	        
+			/*Date dataHoraAtual = new Date();
+			String data = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(dataHoraAtual);*/
 			
 			
 			resposta = new Resposta(fileName, problem, data,sourceCode);
