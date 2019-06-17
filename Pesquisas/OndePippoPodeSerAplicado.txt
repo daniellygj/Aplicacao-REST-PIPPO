@@ -1,0 +1,9 @@
+O que é e para que tipo de arquivo pode ser aplicado
+É um micro framework web de código aberto ( Apache License ) em Java, com dependências mínimas e uma rápida curva de aprendizado. 
+O objetivo deste projeto é criar um micro framework web em Java que deve ser fácil de usar e hackear. 
+
+O Pippo pode ser usado em aplicações pequenas e médias e também em aplicações baseadas na arquitetura de micro serviços. 
+Além disso, o Pippo vem com uma pegada muito pequena que o torna excelente para dispositivos embarcados (Raspberry Pi, por exemplo).
+Pippo faz um ótimo trabalho misturando páginas geradas pelo servidor com APIs RESTful. Temos uma pode ter integracao com AngularJS .
+O framework vem com muitos módulos úteis ( Spring , Guice , Metrics , Cookie de sessão , Controller , motores de tipo de conteúdo - Json, Xml , Yaml , Text ) e muitos aplicativos de demonstração.
+O Pippo permite que você use o WebSocket em seu aplicativo de maneira fácil e uniforme. Você usa a mesma interface para todos os principais servidores da Web incorporados suportados pelo Pippo integrado (Jetty, Tomcat e Undertow).
