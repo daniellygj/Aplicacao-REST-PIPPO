@@ -1,0 +1,11 @@
+{  
+   "filename":"zerinho.py",
+   "problem":"A",
+   "sourcecode":"QSwgQiwgQyA9IFtpbnQobCkgZm9yIGwgaW4gaW5wdXQoKS5zcGxpdCgpXQoKCmlmIEE9PUIgYW5kIEE9PUM6CiAgICByID0gIioiCmVsaWYgQT09QiBhbmQgQSE9QzoKICAgIHIgPSAiQyIKZWxpZiBDPT1CIGFuZCBDIT1BOgogICAgciA9ICJBIgplbGlmIEE9PUMgYW5kIEEhPUI6CiAgICByID0gIkIiCgpwcmludChyKQo="
+}
+
+{  
+   "filename":"mergulho.py",
+   "problem":"B",
+   "sourcecode":"bnVtX2ZvaSxudW1fdm9sdG91ID0gW2ludChpKSBmb3IgaSBpbiBpbnB1dCgpLnNwbGl0KCcgJyldCmlkX2Rvc19xX3ZvbHRhcmFtID0gaW5wdXQoKS5zcGxpdCgnICcpCm5hb192b2x0YXJvID0gW10KZm9yIGkgaW4gcmFuZ2UoMSxudW1fZm9pKzEpOgogICAgaWYgc3RyKGkpIG5vdCBpbiBpZF9kb3NfcV92b2x0YXJhbToKICAgICAgICBuYW9fdm9sdGFyby5hcHBlbmQoaSkKcmVzcCA9ICcqJwppZiBsZW4obmFvX3ZvbHRhcm8pICE9IDA6CiAgICByZXNwID0gJycKICAgIGZvciBpZCBpbiBuYW9fdm9sdGFybzoKICAgICAgICByZXNwICs9IHN0cihpZCkgKyAnICcKICAgIHJlc3AgPSByZXNwLnN0cmlwKCkKCnByaW50KHJlc3Ap"
+}
