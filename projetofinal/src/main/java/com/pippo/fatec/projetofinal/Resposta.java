@@ -6,7 +6,7 @@ public class Resposta {
 	private String problem;
 	private String datetime;
 	private String sourceCode;
-	
+	private String status;
 	
 	
 	public String getDatetime() {
@@ -21,8 +21,6 @@ public class Resposta {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	private String status;
-	
 	public String getFilename() {
 		return filename;
 	}

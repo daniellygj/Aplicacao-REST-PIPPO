@@ -2,10 +2,9 @@ package com.pippo.fatec.projetofinal;
 
 import java.io.BufferedReader;
 
-import java.text.SimpleDateFormat;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.LinkedList;
 
 import org.json.JSONException;
@@ -57,7 +56,7 @@ public class EventApplication extends Application {
 		});
 		GET("/loadjson/datetime/{value}", routeContext -> {
 			if(routeContext.getParameter("value") != null){
-				routeContext.json().send(py.getByIdDate(routeContext.getParameter("value").toString()));
+				routeContext.json().send(py.getByDate(routeContext.getParameter("value").toString()));
 			}
 			
 		});

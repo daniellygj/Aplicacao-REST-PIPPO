@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Controller{
 	
-	List<Resposta> respostas = new ArrayList<Resposta>();
+	private List<Resposta> respostas = new ArrayList<Resposta>();
 	
 	public void createCodePython(Resposta rep){
 		
@@ -104,9 +104,6 @@ public class Controller{
 					s = stdInput.readLine();
 					line = reader.readLine();
 
-					System.out.println(s);
-					System.out.println(line);
-
 					if (s == null && line == null)
 						break;
 
@@ -150,7 +147,7 @@ public class Controller{
 		return listByProblem;
 	}
 	
-	public List<Resposta> getByIdDate(String date){
+	public List<Resposta> getByDate(String date){
 		List<Resposta> listByDate = new ArrayList<Resposta>();
 		
 		for(Resposta resp: respostas) {
@@ -160,6 +157,7 @@ public class Controller{
 		}
 		return listByDate;
 	}
+	
 	public List<Resposta> getByStatus(String status){
 		List<Resposta> listByStatus = new ArrayList<Resposta>();
 		
