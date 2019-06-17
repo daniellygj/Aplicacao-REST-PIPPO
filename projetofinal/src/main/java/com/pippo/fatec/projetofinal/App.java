@@ -1,6 +1,5 @@
 package com.pippo.fatec.projetofinal;
 
-import java.awt.*;
 import java.io.IOException;
 import java.util.Optional;
 import ro.pippo.core.Pippo;
@@ -21,6 +20,7 @@ public class App // port 8338
     	/*Chamada da classe das rotas para inicialização da aplicação*/	
         Pippo pippo = new Pippo(new EventApplication());
         pippo.start(Integer.parseInt(port.orElse("8083")));
-
+       
+     	
     }
 }
