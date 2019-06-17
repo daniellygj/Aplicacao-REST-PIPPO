@@ -104,6 +104,9 @@ public class Controller{
 					s = stdInput.readLine();
 					line = reader.readLine();
 
+					System.out.println(s);
+					System.out.println(line);
+
 					if (s == null && line == null)
 						break;
 
