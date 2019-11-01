@@ -5,8 +5,3 @@ Trabalho final da disciplina de Linguagem de Programação ll do curso de Banco 
 ## Ferramentas utilizadas
 Pippo; StarUML; Eclipse; Postman;
 
-
-
-![imagem](UML.jpg)
-
-
